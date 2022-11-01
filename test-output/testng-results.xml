@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="12" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-01T14:11:56 IST" name="Default suite" finished-at="2022-11-01T14:12:33 IST" duration-ms="36865">
+    <groups>
+    </groups>
+    <test started-at="2022-11-01T14:11:56 IST" name="Default test" finished-at="2022-11-01T14:12:33 IST" duration-ms="36865">
+      <class name="pages.VerifyNewCustomer">
+        <test-method is-config="true" signature="initBrowser()[pri:0, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:11:56 IST" name="initBrowser" finished-at="2022-11-01T14:12:09 IST" duration-ms="12899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowser -->
+        <test-method signature="NewCustomer()[pri:1, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:09 IST" name="NewCustomer" finished-at="2022-11-01T14:12:19 IST" duration-ms="10539" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[@title='Advertisement']"}
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.3', revision: '4b786a1e430'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b76697ea4ae017cc3b4a30c7a17c2e0c, findElement {using=xpath, value=//iframe[@title='Advertisement']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\pppal\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54042}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54042/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b76697ea4ae017cc3b4a30c7a17c2e0c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//iframe[@title='Advertisement']"}
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.5.3', revision: '4b786a1e430'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b76697ea4ae017cc3b4a30c7a17c2e0c, findElement {using=xpath, value=//iframe[@title='Advertisement']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\pppal\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54042}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54042/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b76697ea4ae017cc3b4a30c7a17c2e0c
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at pages.VerifyNewCustomer.NewCustomer(VerifyNewCustomer.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NewCustomer -->
+        <test-method signature="verifyCustomerNameTextboxIsEnabled()[pri:2, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:19 IST" name="verifyCustomerNameTextboxIsEnabled" finished-at="2022-11-01T14:12:19 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerNameTextboxIsEnabled -->
+        <test-method signature="verifyCustomerNameTextbox()[pri:3, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:19 IST" name="verifyCustomerNameTextbox" finished-at="2022-11-01T14:12:20 IST" duration-ms="575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerNameTextbox -->
+        <test-method signature="verifygenderRadioButton()[pri:4, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:20 IST" name="verifygenderRadioButton" finished-at="2022-11-01T14:12:20 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifygenderRadioButton -->
+        <test-method signature="verifyCalendar()[pri:5, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:20 IST" name="verifyCalendar" finished-at="2022-11-01T14:12:21 IST" duration-ms="1131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCalendar -->
+        <test-method signature="verifyAddressTextbox()[pri:6, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:21 IST" name="verifyAddressTextbox" finished-at="2022-11-01T14:12:22 IST" duration-ms="494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddressTextbox -->
+        <test-method signature="verifyCityTab()[pri:7, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:22 IST" name="verifyCityTab" finished-at="2022-11-01T14:12:27 IST" duration-ms="5490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCityTab -->
+        <test-method signature="verifyStateTab()[pri:8, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:27 IST" name="verifyStateTab" finished-at="2022-11-01T14:12:28 IST" duration-ms="487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStateTab -->
+        <test-method signature="verifyPinTab()[pri:9, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:28 IST" name="verifyPinTab" finished-at="2022-11-01T14:12:28 IST" duration-ms="438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPinTab -->
+        <test-method signature="verifyMobileNoTab()[pri:10, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:28 IST" name="verifyMobileNoTab" finished-at="2022-11-01T14:12:29 IST" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMobileNoTab -->
+        <test-method signature="verifyEmailTab()[pri:11, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:29 IST" name="verifyEmailTab" finished-at="2022-11-01T14:12:29 IST" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailTab -->
+        <test-method signature="verifyPasswordTab()[pri:12, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:29 IST" name="verifyPasswordTab" finished-at="2022-11-01T14:12:29 IST" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordTab -->
+        <test-method signature="verifySubmitButton()[pri:13, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:29 IST" name="verifySubmitButton" finished-at="2022-11-01T14:12:32 IST" duration-ms="3306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:pages.VerifyNewCustomer@351d00c0]" started-at="2022-11-01T14:12:32 IST" name="tearDown" finished-at="2022-11-01T14:12:33 IST" duration-ms="362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- pages.VerifyNewCustomer -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

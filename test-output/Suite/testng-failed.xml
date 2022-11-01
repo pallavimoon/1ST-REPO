@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="pages.VerifyNewCustomer">
+        <methods>
+          <include name="initBrowser"/>
+          <include name="verifyCustomerNameTextbox"/>
+          <include name="verifyCustomerNameTextboxIsEnabled"/>
+          <include name="tearDown"/>
+          <include name="NewCustomer"/>
+          <include name="verifyCalendar"/>
+          <include name="verifygenderRadioButton"/>
+        </methods>
+      </class> <!-- pages.VerifyNewCustomer -->
+      <class name="pages.ValidCredentials">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyUrl"/>
+          <include name="initBrowser"/>
+          <include name="verifyLoginWithCorrectCredential"/>
+        </methods>
+      </class> <!-- pages.ValidCredentials -->
+      <class name="pages.InvalidCredential">
+        <methods>
+          <include name="loginwithemptypass"/>
+          <include name="loginwithemptypassanduserid"/>
+          <include name="tearDown"/>
+          <include name="loginWithInvalidPassword"/>
+          <include name="initBrowser"/>
+          <include name="loginWithInvalidCredentials"/>
+          <include name="loginwithemptyuserid"/>
+          <include name="loginWithInvalidId"/>
+        </methods>
+      </class> <!-- pages.InvalidCredential -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
