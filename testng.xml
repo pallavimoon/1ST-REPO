@@ -6,6 +6,7 @@
       <class name="pages.ValidCredentials"/>
       <class name="pages.InvalidCredential"/>
       <class name="pages.VerifyNewCustomer"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

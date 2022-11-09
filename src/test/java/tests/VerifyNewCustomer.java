@@ -1,14 +1,11 @@
-package pages;
+
+package tests;
 
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -50,13 +47,30 @@ public class VerifyNewCustomer {
 	}
 
 	@Test(priority = 2)
+	public void validateResetButton() throws InterruptedException {
+//		driver.findElement(By.xpath("//input[@name='name']")).sendKeys("Kriti Sanon");
+//		driver.findElement(By.xpath("//input[@value='f']")).click();
+//		driver.findElement(By.xpath("//input[@id='dob']")).sendKeys("29051993");
+//		driver.findElement(By.xpath("//textarea[@name='addr']")).sendKeys("d/o Suresh Sanon @Chandigarh");
+//		driver.findElement(By.xpath("//input[@name='city']")).sendKeys("Pune");
+//		driver.findElement(By.xpath("//input[@name='state']")).sendKeys("Maharashtra");
+//		driver.findElement(By.xpath("//input[@name='pinno']")).sendKeys("123456");
+//		driver.findElement(By.xpath("//input[@name='telephoneno']")).sendKeys("0123456789");
+//		driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys("abcd@gmail.com");
+//		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Abcd@123");
+//		Thread.sleep(1000);
+//		driver.findElement(By.xpath("//input[@type='reset']")).click();
+		Thread.sleep(1000);
+	}
+
+	@Test(priority = 3)
 	public void verifyCustomerNameTextboxIsEnabled() {
 		WebElement newcustomertxtbox = driver.findElement(By.xpath("//input[@name='name']"));
 		Assert.assertTrue(newcustomertxtbox.isEnabled());
 		System.out.println("CustomerName Textbox is enabled");
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void verifyCustomerNameTextbox() {
 		WebElement newcustomertxtbox = driver.findElement(By.xpath("//input[@name='name']"));
 		newcustomertxtbox.sendKeys("Abc123");
@@ -72,7 +86,7 @@ public class VerifyNewCustomer {
 		newcustomertxtbox.sendKeys("Kriti Sanon");
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void verifygenderRadioButton() {
 		driver.findElement(By.xpath("//input[@value='f']")).click();
 		driver.findElement(By.xpath("//input[@value='m']")).click();
@@ -80,26 +94,24 @@ public class VerifyNewCustomer {
 		System.out.println("geneder radio button is working fine");
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void verifyCalendar() throws InterruptedException {
 		driver.findElement(By.xpath("//input[@id='dob']")).sendKeys("29051993");
 		Thread.sleep(1000);
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void verifyAddressTextbox() {
 		WebElement add = driver.findElement(By.xpath("//textarea[@name='addr']"));
 		System.out.println("The address textbox is enabled: " + add.isEnabled());
-		add.sendKeys("d/o Suresh Sanon @Chandigarh");
 		WebElement warning1 = driver.findElement(By.xpath("//label[@id='message3']"));
-		Assert.assertTrue(warning1.isDisplayed());
+		Assert.assertTrue(warning1.isEnabled());
 		System.out.println("user gets a warning: " + warning1.getText());
 		add.clear();
 		add.sendKeys("daughter of suresh mun chandigarh");
-
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void verifyCityTab() throws InterruptedException {
 		WebElement city = driver.findElement(By.xpath("//input[@name='city']"));
 		Assert.assertTrue(city.isEnabled());
@@ -118,7 +130,7 @@ public class VerifyNewCustomer {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void verifyStateTab() {
 		WebElement state = driver.findElement(By.xpath("//input[@name='state']"));
 		Assert.assertTrue(state.isEnabled());
@@ -136,7 +148,7 @@ public class VerifyNewCustomer {
 		state.sendKeys("Punjab");
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void verifyPinTab() {
 		WebElement pin = driver.findElement(By.xpath("//input[@name='pinno']"));
 		Assert.assertTrue(pin.isEnabled());
@@ -155,7 +167,7 @@ public class VerifyNewCustomer {
 
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void verifyMobileNoTab() {
 		WebElement mob = driver.findElement(By.xpath("//input[@name='telephoneno']"));
 		Assert.assertTrue(mob.isEnabled());
@@ -174,15 +186,15 @@ public class VerifyNewCustomer {
 		System.out.println("TC failed=it is accepting more than 10 digits");
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 12)
 	public void verifyEmailTab() {
 		WebElement email = driver.findElement(By.xpath("//input[@name='emailid']"));
 		Assert.assertTrue(email.isEnabled());
 		System.out.println("email tab is enabled");
-		email.sendKeys("kriti15@gmail.com");
+		email.sendKeys("kriti01@gmail.com");
 	}
 
-	@Test(priority = 12)
+	@Test(priority = 13)
 	public void verifyPasswordTab() {
 		WebElement pass = driver.findElement(By.xpath("//input[@name='password']"));
 		Assert.assertTrue(pass.isEnabled());
@@ -190,7 +202,7 @@ public class VerifyNewCustomer {
 		pass.sendKeys("Kriti@123");
 	}
 
-	@Test(priority = 13)
+	@Test(priority = 14)
 	public void verifySubmitButton() {
 		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		try {
